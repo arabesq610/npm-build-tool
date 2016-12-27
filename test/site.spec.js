@@ -6,7 +6,6 @@ describe('our amazing site', function () {
         request
             .get('/')
             .expect('hello from koa.')
-            .end(done)
-
+            .end(done);
     });
 });

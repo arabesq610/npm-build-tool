@@ -5,10 +5,16 @@
     "main": "index.js",
     "scripts": {
         "test": "mocha test -u bdd -R spec",
+        "pretest": "npm run lint",
+        "lint": "jshint *.js **/*.js",
         "start": "node index.js",
         "start:dev": "node index.js 4000",
         "stop": "echo running stop script",
         "restart": "echo running restart script"
+    },
+    "jshintConfig": {
+        "esnext": "true",
+        "noyield": "true"
     },
     "repository": {
         "type": "git",
@@ -25,6 +31,7 @@
     },
     "homepage": "https://github.com/arabesq610/npm-build-tool#readme",
     "devDependencies": {
+        "jshint": "^2.9.4",
         "mocha": "^3.2.0",
         "should": "^11.1.2",
         "supertest": "^2.0.1"
